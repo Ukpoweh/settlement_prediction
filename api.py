@@ -12,7 +12,7 @@ model = pickle.load(open('model (1).pkl', 'rb'))
 with open("beacon_mapping.json", "r") as f:
     beacon_mapping = json.load(f)
 
-feature_cols = ['Beacon Code', 'Min Temp (°C)', 'Avg Temp (°C)', 'Max Temp (°C)', 'Precipitation (mm)', 'Max Wind (kph)', 'Avg Humidity (%)']
+feature_cols = ['Beacon Code', 'Sand depth (m)', 'Min Temp (°C)', 'Avg Temp (°C)', 'Max Temp (°C)', 'Precipitation (mm)', 'Max Wind (kph)', 'Avg Humidity (%)']
 
 @app.route('/predict', methods=['POST'])
 def predict():
