@@ -7,6 +7,7 @@ import os
 from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 model = pickle.load(open('model (1).pkl', 'rb'))
 
